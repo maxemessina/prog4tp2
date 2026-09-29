@@ -29,7 +29,7 @@ test('completa el flujo de listar, leer, crear, modificar y eliminar notas', asy
   const createResponse = await request.post('/notes', {
     data: { title: 'Preparar parcial', content: 'Repasar ejercicios', pinned: false }
   });
-  expect(createResponse.status()).toBe(200);
+  expect(createResponse.status()).toBe(201);
   const createdNote = await createResponse.json();
   expect(createdNote).toMatchObject({
     title: 'Preparar parcial',
@@ -47,7 +47,7 @@ test('completa el flujo de listar, leer, crear, modificar y eliminar notas', asy
   });
 
   const deleteResponse = await request.delete(`/notes/${createdNote.id}`);
-  expect(deleteResponse.status()).toBe(200);
+  expect(deleteResponse.status()).toBe(204);
 });
 
 test('rechaza crear una nota con campos inválidos', async ({ request, baseURL }) => {
