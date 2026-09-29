@@ -1,3 +1,11 @@
+# Grupo 1  Práctica 2 - Testing
+
+### Integrantes:
+* Prisicila Arrimada.
+* Tomás Astudillo.
+* Valentina Guerrieri.
+* Máximo Messina.
+
 # Notes API — Práctico de Testing (TUPProIV)
 
 API REST de notas (crear, listar, leer, modificar, eliminar) con TypeScript +
